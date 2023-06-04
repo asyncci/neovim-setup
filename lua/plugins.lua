@@ -37,4 +37,6 @@ return require('packer').startup(function(use)
 
     use 'windwp/nvim-autopairs'
 
+    use 'romgrk/barbar.nvim'
+
 end)
