@@ -40,4 +40,6 @@ return require('packer').startup(function(use)
 
     use 'romgrk/barbar.nvim'
 
+    use 'startup-nvim/startup.nvim'
+
 end)

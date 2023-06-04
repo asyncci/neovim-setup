@@ -19,6 +19,8 @@ opt.softtabstop = 4
 opt.mouse = 'a'
 opt.swapfile = false
 
+vim.o.nohidden = true
+
 opt.termguicolors = true
 
 opt.updatetime = 50
