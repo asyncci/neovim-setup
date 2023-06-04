@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
     })
 
     use 'ellisonleao/gruvbox.nvim'
+    use 'navarasu/onedark.nvim'
 
     use 'kyazdani42/nvim-web-devicons'
 
