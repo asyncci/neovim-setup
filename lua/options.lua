@@ -6,7 +6,6 @@ opt.ignorecase = true
 opt.hlsearch = true
 opt.autoindent = true
 opt.number = true
-opt.relativenumber = true
 opt.tabstop = 4
 opt.expandtab = true
 opt.shiftwidth = 4 
