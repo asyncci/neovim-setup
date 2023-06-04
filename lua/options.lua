@@ -39,5 +39,5 @@ vim.keymap.set('n','<C-n>',':CHADopen<CR>')
 
 vim.keymap.set('n','<C-l>',':call setqflist([])<CR>')
 
-vim.keymap.set('v', "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set('v', "K", ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', "J", ":m '<-2<CR>gv=gv")
