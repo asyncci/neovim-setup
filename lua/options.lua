@@ -10,6 +10,7 @@ opt.incsearch = true
 opt.autoindent = true
 
 opt.number = true
+opt.relativenumber = true
 opt.scrolloff = 8
 
 opt.tabstop = 4
