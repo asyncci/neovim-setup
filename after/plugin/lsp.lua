@@ -52,7 +52,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 mason_lspconfig.setup {
-    ensure_installed = { 'rust_analyzer', 'gopls', 'lua_ls' }
+    ensure_installed = { 'rust_analyzer', 'gopls' }
 }
 
 mason_lspconfig.setup_handlers {
@@ -87,7 +87,11 @@ cmp.setup({
     })
   })
 
-require('nvim-autopairs').setup{}
+require('autoclose').setup({
+  keys = {
+      [">"] = { escape = true, close = false, pair = "<>"},
+   },
+})
 
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 cmp.event:on (

@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
 
     use ({
         'nvim-lualine/lualine.nvim',
-        config = function() require('inner.lualine') end,
+    --    config = function() require('inner.lualine') end,
     })
 
     use 'ellisonleao/gruvbox.nvim'
@@ -19,6 +19,11 @@ return require('packer').startup(function(use)
     use ({
         'ms-jpq/chadtree',
         run = 'python3 -m chadtree deps',
+    })
+
+    use ({
+        'nvim-treesitter/nvim-treesitter',
+        config = function() require('inner.tree-sitter') end,
     })
 
     use 'tpope/vim-sleuth'
@@ -37,6 +42,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/vim-vsnip'
 
     use 'windwp/nvim-autopairs'
+    use 'm4xshen/autoclose.nvim'
 
     use 'romgrk/barbar.nvim'
 
