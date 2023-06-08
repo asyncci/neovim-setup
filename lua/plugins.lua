@@ -21,7 +21,6 @@ return require('packer').startup(function(use)
     --lsp / autoformat
     use 'neovim/nvim-lspconfig'
     use {'williamboman/mason.nvim' , run = ':MasonUpdate'}
-    use {'rust-lang/rust.vim', config = function() vim.g.rustfmt_autosave = 1 end }
 
     --cmp
     use 'hrsh7th/cmp-nvim-lsp'
