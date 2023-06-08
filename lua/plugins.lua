@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
 
     use ({
         'nvim-lualine/lualine.nvim',
-    --    config = function() require('inner.lualine') end,
+        config = function() require('inner.lualine') end,
     })
 
     use 'ellisonleao/gruvbox.nvim'
