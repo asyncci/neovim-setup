@@ -45,13 +45,10 @@ return require('packer').startup(function(use)
         require("toggleterm").setup()
     end}
 
+    --autclose brackets
+    use {'m4xshen/autoclose.nvim', config = function ()
+        require('autoclose').setup()
+    end}
 end)
-
-
-
-
-
-
-
 
 
