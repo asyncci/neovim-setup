@@ -16,9 +16,14 @@ require('mason').setup({
 
 local caps = require('cmp_nvim_lsp').default_capabilities()
 
+local on_attach = function(client)
+    require'completion'.on_attach(client)
+end
+
 local lspconfig = require('lspconfig')
 
 lspconfig.rust_analyzer.setup{
+    --on_attach = on_attach,
     filetypes = {'rust'},
     root_dir = lspconfig.util.root_pattern('Cargo.toml'),
     settings = {
