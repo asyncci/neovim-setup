@@ -40,6 +40,12 @@ opt.undofile = true
 vim.keymap.set('n','<C-n>',':NvimTreeToggle<CR>')
 vim.keymap.set('n','<C-CR>',':Telescope<CR>')
 vim.keymap.set('n','<C-`>',':ToggleTerm<CR>')
+
+--cargo run
+vim.keymap.set('n','cr',':TermExec cmd="cargo run"<CR>')
+vim.keymap.set('n','cm',':TermExec cmd="cargo check"<CR>')
+
+vim.keymap.set('n','c;',':TermExec cmd="^C"<CR>')
 --plugins END
 
 --tabs

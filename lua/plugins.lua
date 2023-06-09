@@ -8,19 +8,19 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-tree.lua'
 
     --fuzzy
-    use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
+    use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
 
     --buffers
-    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
 
-    --appearance 
+    --appearance
     use 'mcchrish/zenbones.nvim'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
 
     --lsp / autoformat
     use 'neovim/nvim-lspconfig'
-    use {'williamboman/mason.nvim' , run = ':MasonUpdate'}
+    use { 'williamboman/mason.nvim', run = ':MasonUpdate' }
 
     --cmp
     use 'hrsh7th/cmp-nvim-lsp'
@@ -34,21 +34,20 @@ return require('packer').startup(function(use)
     --startup
     use {
         "startup-nvim/startup.nvim",
-        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
         config = function()
-            require"startup".setup()
+            require "startup".setup()
         end
     }
 
     --terminal
-    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    use { "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
-    end}
+    end }
 
     --autclose brackets
-    use {'m4xshen/autoclose.nvim', config = function ()
+    use { 'm4xshen/autoclose.nvim', config = function()
         require('autoclose').setup()
-    end}
+    end }
+
 end)
-
-
