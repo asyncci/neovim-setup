@@ -44,13 +44,11 @@ vim.keymap.set('n','<C-`>',':ToggleTerm<CR>')
 --cargo run
 vim.keymap.set('n','cr',':TermExec cmd="cargo run"<CR>')
 vim.keymap.set('n','cm',':TermExec cmd="cargo check"<CR>')
+vim.keymap.set('n','ct',':TermExec cmd="cargo test"<CR>')
 
-vim.keymap.set('n','c;',':TermExec cmd="^C"<CR>')
+vim.keymap.set('n','c;','<Cmd>TermExec cmd="<C-c>"<CR>')
 --plugins END
 
---tabs
---vim.keymap.set('n','<A-Right>',':bnext<CR>')
---vim.keymap.set('n','<A-Left>',':bprevious<CR>')
 
 vim.keymap.set('n','<C-h>',':nohlsearch<CR>')
 vim.keymap.set('n','<C-l>',':call setqflist([])<CR>')
