@@ -31,14 +31,6 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-vsnip'
     use 'hrsh7th/vim-vsnip'
 
-    --startup
-    use {
-        "startup-nvim/startup.nvim",
-        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-        config = function()
-            require "startup".setup()
-        end
-    }
 
     --terminal
     use { "akinsho/toggleterm.nvim", tag = '*', config = function()
