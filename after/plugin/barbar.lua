@@ -11,7 +11,13 @@ vim.keymap.set('n', 'gs', '<Cmd>BufferOrderByDirectory<CR>', opts)
 
 require('barbar').setup{
     animation = false,
-    sidebar_filetypes = {
-        NvimTree = true,
+    highlight_visible = false,
+    tabpages = true,
+    icons = {
+        separator_at_end = false,
+        separator = { left = "", right = ""},
+        filetype = {
+            enabled = false,
+        },
     }
 }

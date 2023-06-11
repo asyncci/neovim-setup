@@ -25,6 +25,7 @@ vim.cmd[[ colorscheme slate]]
 
 opt.updatetime = 50
 
+opt['guicursor'] = ""
 
 --undo
 opt.swapfile = false
