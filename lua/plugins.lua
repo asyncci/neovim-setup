@@ -11,10 +11,10 @@ return require('packer').startup(function(use)
     use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
 
     --buffers
-    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
+--    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
 
     --appearance
-    use 'mcchrish/zenbones.nvim'
+    use 'morhetz/gruvbox'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
 
