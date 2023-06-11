@@ -37,7 +37,6 @@ opt.undofile = true
 --mappings
 
 --plugins START
-vim.keymap.set('n','<C-n>',':NvimTreeToggle<CR>')
 vim.keymap.set('n','<C-CR>',':Telescope<CR>')
 vim.keymap.set('n','<C-`>',':ToggleTerm<CR>')
 
