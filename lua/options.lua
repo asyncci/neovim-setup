@@ -21,9 +21,7 @@ opt.mouse = 'a'
 opt.swapfile = false
 
 opt.termguicolors = true
-opt.background = 'dark'
-vim.g.zenbones_compat = 1
-vim.cmd[[ colorscheme zenbones ]]
+vim.cmd[[ colorscheme slate]]
 
 opt.updatetime = 50
 
