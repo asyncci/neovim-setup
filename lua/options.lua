@@ -9,7 +9,7 @@ opt.incsearch = true
 
 opt.autoindent = true
 
-opt.number = true
+--opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 8
 
@@ -20,9 +20,10 @@ opt.softtabstop = 4
 opt.mouse = 'a'
 opt.swapfile = false
 
+opt.syntax = "on" 
 opt.termguicolors = true
-vim.cmd [[ colorscheme gruvbox ]]
-vim.g.gruvbox_contrast_dark = "hard"
+vim.cmd [[ silent! let base16colorspace=256]]
+vim.cmd [[ silent! colorscheme base16-darktooth ]]
 opt.updatetime = 50
 
 opt['guicursor'] = ""
@@ -40,6 +41,7 @@ vim.keymap.set('n','<Space><Tab>', '<Cmd>b#<CR>')
 --plugins START
 vim.keymap.set('n', '<C-CR>', ':Telescope<CR>')
 vim.keymap.set('n', '<C-`>', ':ToggleTerm<CR>')
+
 
 --cargo run
 vim.keymap.set('n', 'cr', ':TermExec cmd="cargo run"<CR>')

@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
 --    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
 
     --appearance
-    use 'morhetz/gruvbox'
+    use 'chriskempson/base16-vim'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
 

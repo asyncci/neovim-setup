@@ -80,6 +80,11 @@ _G.packer_plugins = {
     path = "/home/asyncci/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
     url = "https://github.com/m4xshen/autoclose.nvim"
   },
+  ["base16-vim"] = {
+    loaded = true,
+    path = "/home/asyncci/.local/share/nvim/site/pack/packer/start/base16-vim",
+    url = "https://github.com/chriskempson/base16-vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/asyncci/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -104,11 +109,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/asyncci/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
-  },
-  gruvbox = {
-    loaded = true,
-    path = "/home/asyncci/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/morhetz/gruvbox"
   },
   ["lualine.nvim"] = {
     loaded = true,
