@@ -40,15 +40,15 @@ vim.keymap.set('n','<Space><Tab>', '<Cmd>b#<CR>')
 
 --plugins START
 vim.keymap.set('n', '<C-CR>', ':Telescope<CR>')
-vim.keymap.set('n', '<C-`>', ':ToggleTerm<CR>')
-
-
---cargo run
-vim.keymap.set('n', 'cr', ':TermExec cmd="cargo run"<CR>')
-vim.keymap.set('n', 'cm', ':TermExec cmd="cargo check"<CR>')
-vim.keymap.set('n', 'ct', ':TermExec cmd="cargo test"<CR>')
-
-vim.keymap.set('n', 'c;', '<Cmd>TermExec cmd="<C-c>"<CR>')
+--vim.keymap.set('n', '<C-`>', ':ToggleTerm<CR>')
+--
+--
+----cargo run
+--vim.keymap.set('n', 'cr', ':TermExec cmd="cargo run"<CR>')
+--vim.keymap.set('n', 'cm', ':TermExec cmd="cargo check"<CR>')
+--vim.keymap.set('n', 'ct', ':TermExec cmd="cargo test"<CR>')
+--
+--vim.keymap.set('n', 'c;', '<Cmd>TermExec cmd="<C-c>"<CR>')
 --plugins END
 
 
