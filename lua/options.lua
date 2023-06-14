@@ -1,5 +1,4 @@
 local opt = vim.opt
-
 opt.backspace = '2'
 opt.showmatch = true
 opt.ignorecase = true
@@ -19,6 +18,8 @@ opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.mouse = 'a'
 opt.swapfile = false
+
+opt.clipboard = 'unnamed'
 
 opt.syntax = "on" 
 opt.termguicolors = true

@@ -13,6 +13,14 @@ require('mason').setup({
     }
 })
 
+--turn off inline error message
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        underline = true,
+        virtual_text = false
+    }
+)
+
 local caps = require('cmp_nvim_lsp').default_capabilities()
 
 local on_attach = function(client)
