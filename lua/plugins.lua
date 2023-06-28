@@ -22,6 +22,9 @@ return require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
     use { 'williamboman/mason.nvim', run = ':MasonUpdate' }
 
+    --dap - debugger
+    use 'mfussenegger/nvim-dap'
+
     --cmp
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'

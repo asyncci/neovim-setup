@@ -10,6 +10,8 @@ require('mason').setup({
         'rust-analyzer',
         'gopls',
         'lua-language-server',
+        'clangd',
+        'codelldb'
     }
 })
 
