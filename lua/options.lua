@@ -8,7 +8,7 @@ opt.incsearch = true
 
 opt.autoindent = true
 
---opt.number = true
+opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 8
 
