@@ -11,7 +11,8 @@ require('mason').setup({
         'gopls',
         'lua-language-server',
         'clangd',
-        'codelldb'
+        'codelldb',
+        'pyright'
     }
 })
 
@@ -27,7 +28,7 @@ local caps = require('cmp_nvim_lsp').default_capabilities()
 
 local lspconfig = require('lspconfig')
 
-local servers = { 'rust_analyzer', 'gopls', 'lua_ls', 'clangd' }
+local servers = { 'rust_analyzer', 'gopls', 'lua_ls', 'clangd', 'pyright' }
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {

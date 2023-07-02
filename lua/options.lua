@@ -59,6 +59,7 @@ vim.keymap.set('n', '<C-l>', ':call setqflist([])<CR>')
 vim.keymap.set('v', "K", ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', "J", ":m '<-2<CR>gv=gv")
 
+
 --window resize
 vim.keymap.set("n", "<C-0>", ':vertical resize +5<CR>')   -- make the window biger vertically
 vim.keymap.set("n", "<C-9>", ':vertical resize -5<CR>')   -- make the window smaller vertically
