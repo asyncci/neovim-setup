@@ -12,10 +12,10 @@ opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 8
 
-opt.tabstop = 4
+opt.tabstop = 2
 opt.expandtab = true
-opt.shiftwidth = 4
-opt.softtabstop = 4
+opt.shiftwidth = 2
+opt.softtabstop = 2
 opt.mouse = 'a'
 opt.swapfile = false
 
@@ -24,7 +24,7 @@ opt.clipboard = 'unnamed'
 opt.syntax = "on" 
 opt.termguicolors = true
 vim.cmd [[ silent! let base16colorspace=256]]
-vim.cmd [[ silent! colorscheme base16-darktooth ]]
+vim.cmd [[ silent! colorscheme base16-pop ]]
 opt.updatetime = 50
 
 opt['guicursor'] = ""
