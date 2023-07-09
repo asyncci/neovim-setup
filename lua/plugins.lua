@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'
 
     --lsp / autoformat
-    use { 'neovim/nvim-lspconfig', requires = "williamboman/mason-lspconfig.nvim" }
+    use { 'neovim/nvim-lspconfig', requires = {"williamboman/mason-lspconfig.nvim", "Hoffs/omnisharp-extended-lsp.nvim"} }
     use { 'williamboman/mason.nvim', run = ':MasonUpdate' }
 
     --dap - debugger
