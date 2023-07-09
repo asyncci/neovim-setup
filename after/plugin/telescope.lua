@@ -1,6 +1,6 @@
 require('telescope').setup()
 
-local builtin = require('telescope.builtin') 
+local builtin = require('telescope.builtin')
 local utils = require('telescope.utils')
 
 
