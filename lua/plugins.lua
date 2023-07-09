@@ -5,13 +5,13 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/nvim-treesitter'
 
     --file explorer
---    use 'nvim-tree/nvim-tree.lua'
+    --    use 'nvim-tree/nvim-tree.lua'
 
     --fuzzy
     use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
 
     --buffers
---    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
+    --    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
 
     --appearance
     use 'chriskempson/base16-vim'
@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'
 
     --lsp / autoformat
-    use 'neovim/nvim-lspconfig'
+    use { 'neovim/nvim-lspconfig', requires = "williamboman/mason-lspconfig.nvim" }
     use { 'williamboman/mason.nvim', run = ':MasonUpdate' }
 
     --dap - debugger
@@ -36,13 +36,12 @@ return require('packer').startup(function(use)
 
 
     --terminal
-   -- use { "akinsho/toggleterm.nvim", tag = '*', config = function()
-   --     require("toggleterm").setup()
-   -- end }
+    -- use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+    --     require("toggleterm").setup()
+    -- end }
 
     --autclose brackets
     use { 'm4xshen/autoclose.nvim', config = function()
         require('autoclose').setup()
     end }
-
 end)

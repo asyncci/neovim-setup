@@ -12,9 +12,12 @@ require('mason').setup({
         'lua-language-server',
         'clangd',
         'codelldb',
-        'pyright'
+        'pyright',
+        'omnisharp'
     }
 })
+
+require('mason-lspconfig').setup()
 
 --turn off inline error message
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
@@ -28,19 +31,36 @@ local caps = require('cmp_nvim_lsp').default_capabilities()
 
 local lspconfig = require('lspconfig')
 
-local servers = { 'rust_analyzer', 'gopls', 'lua_ls', 'clangd', 'pyright' }
+local stdOpts = {
+	capabilities = capabilities,
+}
+local omnisharpOpts = {
 
-for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-        settings = {
-            ['rust-analyzer'] = {
-                cargo = {
-                    allFeatures = true,
-                },
+	capabilities = caps,
+	on_attach = function(client, bufnr)
+		client.server_capabilities.semanticTokensProvider = nil
+	end,
+}
+local rust_opts = {
+    settings = {
+        ['rust-analyzer'] = {
+            cargo = {
+                allFeatures = true,
             },
         },
-        capabilities = caps,
-    }
+    },
+    capabilities = caps
+}
+local servers = {
+    rust_analyzer = rust_opts,
+    omnisharp = omnisharpOpts,
+    clangd = stdOpts,
+	pyright = stdOpts,
+	lua_ls = stdOpts,
+}
+
+for lsp,opts  in pairs(servers) do
+    lspconfig[lsp].setup(opts)
 end
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
