@@ -53,6 +53,13 @@ local on_attach = function(client, bufnr)
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, bufopts)
 
+    if client.name == "clangd" then
+        vim.opt.tabstop = 2
+        vim.opt.expandtab = true
+        vim.opt.shiftwidth = 2
+        vim.opt.softtabstop = 2
+    end
+
     --omnisharp
     if client.name == "omnisharp" then
         vim.keymap.set('n', '<space>D', require('omnisharp_extended').lsp_definitions, opts)
@@ -64,13 +71,26 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-    vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+    vim.keymap.set('n', '<space>f', function()
+        vim.lsp.buf.format({ async = true })
+        vim.cmd("w")
+    end, bufopts)
 end
 
 local stdOpts = {
     capabilities = caps,
     on_attach = on_attach
 }
+
+local clangdExec = "/home/adi/.local/share/nvim/mason/bin/clangd"
+
+local clangdOpts = {
+    capabilities = caps,
+    on_attach = on_attach,
+    cmd = { clangdExec },
+    root_dir = lspconfig.util.root_pattern('.git'),
+}
+
 local omnisharpOpts = {
     handlers = {
         ["textDocument/definition"] = require('omnisharp_extended').handler,
@@ -92,7 +112,7 @@ local rust_opts = {
 local servers = {
     rust_analyzer = rust_opts,
     omnisharp = omnisharpOpts,
-    clangd = stdOpts,
+    clangd = clangdOpts,
     pyright = stdOpts,
     lua_ls = stdOpts,
 }
