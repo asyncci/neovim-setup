@@ -15,9 +15,7 @@ require('mason').setup({
     ensure_installed = ensure_installed
 })
 
-require('mason-lspconfig').setup({
-    ensure_installed = ensure_installed
-})
+require('mason-lspconfig').setup()
 
 --turn off inline error message
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
@@ -82,12 +80,10 @@ local stdOpts = {
     on_attach = on_attach
 }
 
-local clangdExec = "/home/adi/.local/share/nvim/mason/bin/clangd"
 
 local clangdOpts = {
     capabilities = caps,
     on_attach = on_attach,
-    cmd = { clangdExec },
     root_dir = lspconfig.util.root_pattern('.git'),
 }
 
