@@ -1,3 +1,9 @@
+local ensure_installed = {
+        'rust-analyzer',
+        'lua-language-server',
+        'clangd',
+        'omnisharp'
+    }
 require('mason').setup({
     ui = {
         icons = {
@@ -6,18 +12,12 @@ require('mason').setup({
             package_uninstalled = "✗"
         }
     },
-    ensure_installed = {
-        'rust-analyzer',
-        'gopls',
-        'lua-language-server',
-        'clangd',
-        'codelldb',
-        'pyright',
-        'omnisharp'
-    }
+    ensure_installed = ensure_installed
 })
 
-require('mason-lspconfig').setup()
+require('mason-lspconfig').setup({
+    ensure_installed = ensure_installed
+})
 
 --turn off inline error message
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
@@ -113,7 +113,6 @@ local servers = {
     rust_analyzer = rust_opts,
     omnisharp = omnisharpOpts,
     clangd = clangdOpts,
-    pyright = stdOpts,
     lua_ls = stdOpts,
 }
 
