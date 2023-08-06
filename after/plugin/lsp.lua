@@ -1,9 +1,9 @@
 local ensure_installed = {
-        'rust-analyzer',
-        'lua-language-server',
-        'clangd',
-        'omnisharp'
-    }
+    'rust-analyzer',
+    'lua-language-server',
+    'clangd',
+    'omnisharp'
+}
 require('mason').setup({
     ui = {
         icons = {
@@ -105,8 +105,44 @@ local rust_opts = {
     capabilities = caps,
     on_attach = on_attach
 }
+
+---rust
+local rt = require("rust-tools")
+local mason_registry = require("mason-registry")
+local codelldb = mason_registry.get_package("codelldb")
+local extension_path = codelldb:get_install_path() .. "/extension/"
+local codelldb_path = extension_path .. "adapter/codelldb"
+local liblldb_path = extension_path .. "lldb/lib/liblldb.dylib"
+
+rt.setup({
+    dap = {
+        adapter = {
+            type = "executable",
+            command = "/usr/bin/lldb-vscode",
+            name = "rt_lldb",
+        },
+    },
+    server = {
+        capabilities = caps,
+        on_attach = function(client, bufnr)
+            vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+            -- Code action groups
+            vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+            on_attach(client, bufnr)
+        end
+    },
+    tools = {
+        hover_actions = {
+            auto_focus = true,
+        },
+    },
+})
+
+-----
+
+
 local servers = {
-    rust_analyzer = rust_opts,
+    --- rust_analyzer = rust_opts,
     omnisharp = omnisharpOpts,
     clangd = clangdOpts,
     lua_ls = stdOpts,

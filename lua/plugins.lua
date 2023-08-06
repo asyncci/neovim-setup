@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
     --    use 'nvim-tree/nvim-tree.lua'
 
     --fuzzy
-    use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
+    use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 
     --buffers
     --    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
@@ -20,10 +20,13 @@ return require('packer').startup(function(use)
 
     --lsp / autoformat
     use { 'williamboman/mason.nvim', run = ':MasonUpdate' }
-    use { 'neovim/nvim-lspconfig', requires = {"williamboman/mason-lspconfig.nvim", "Hoffs/omnisharp-extended-lsp.nvim"} }
+    use { 'neovim/nvim-lspconfig', requires = { "williamboman/mason-lspconfig.nvim", "Hoffs/omnisharp-extended-lsp.nvim" } }
+
+    --rust
+    use 'simrat39/rust-tools.nvim'
 
     --dap - debugger
-    use 'mfussenegger/nvim-dap'
+    use 'nvim-lua/plenary.nvim'
 
     --cmp
     use 'hrsh7th/cmp-nvim-lsp'
