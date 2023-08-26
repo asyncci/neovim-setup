@@ -2,7 +2,8 @@ local ensure_installed = {
     'rust-analyzer',
     'lua-language-server',
     'clangd',
-    'omnisharp'
+    'omnisharp',
+    'zls'
 }
 require('mason').setup({
     ui = {
@@ -146,6 +147,7 @@ local servers = {
     omnisharp = omnisharpOpts,
     clangd = clangdOpts,
     lua_ls = stdOpts,
+    zls = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do
