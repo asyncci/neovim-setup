@@ -27,6 +27,8 @@ vim.cmd [[ silent! let base16colorspace=256]]
 vim.cmd [[ silent! colorscheme base16-atlas ]]
 opt.updatetime = 50
 
+vim.cmd [[ silent! set clipboard+=unnamedplus]]
+
 opt['guicursor'] = ""
 
 --undo
