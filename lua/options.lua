@@ -24,7 +24,7 @@ opt.clipboard = 'unnamed'
 opt.syntax = "on" 
 opt.termguicolors = true
 vim.cmd [[ silent! let base16colorspace=256]]
-vim.cmd [[ silent! colorscheme base16-pop ]]
+vim.cmd [[ silent! colorscheme base16-atlas ]]
 opt.updatetime = 50
 
 opt['guicursor'] = ""

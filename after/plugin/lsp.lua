@@ -107,6 +107,7 @@ local rust_opts = {
     on_attach = on_attach
 }
 
+--[[
 ---rust
 local rt = require("rust-tools")
 local mason_registry = require("mason-registry")
@@ -140,10 +141,10 @@ rt.setup({
 })
 
 -----
-
+--]]
 
 local servers = {
-    --- rust_analyzer = rust_opts,
+    rust_analyzer = rust_opts,
     omnisharp = omnisharpOpts,
     clangd = clangdOpts,
     lua_ls = stdOpts,
