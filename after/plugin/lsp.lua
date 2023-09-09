@@ -149,6 +149,7 @@ local servers = {
     clangd = clangdOpts,
     lua_ls = stdOpts,
     zls = stdOpts,
+    cmake = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do
