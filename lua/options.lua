@@ -31,6 +31,17 @@ vim.cmd [[ set clipboard+=unnamedplus]]
 
 opt['guicursor'] = ""
 
+--clear jumps
+
+vim.cmd [[ au VimEnter * exe 'tabdo windo clearjumps' | tabnext ]]
+
+--
+
+--folding methods
+vim.cmd [[ set foldmethod=manual]]
+
+--
+
 --undo
 opt.swapfile = false
 opt.backup = false

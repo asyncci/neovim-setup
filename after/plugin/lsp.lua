@@ -1,4 +1,5 @@
 local ensure_installed = {
+    'gopls',
     'rust-analyzer',
     'lua-language-server',
     'clangd',
@@ -150,6 +151,7 @@ local servers = {
     lua_ls = stdOpts,
     zls = stdOpts,
     cmake = stdOpts,
+    gopls = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do
