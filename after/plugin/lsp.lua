@@ -1,4 +1,5 @@
 local ensure_installed = {
+    'lemminx',
     'gopls',
     'rust-analyzer',
     'lua-language-server',
@@ -152,6 +153,7 @@ local servers = {
     zls = stdOpts,
     cmake = stdOpts,
     gopls = stdOpts,
+    lemminx = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do
