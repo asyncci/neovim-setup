@@ -24,7 +24,7 @@ opt.clipboard = 'unnamed'
 opt.syntax = "on" 
 opt.termguicolors = true
 vim.cmd [[ silent! let base16colorspace=256]]
-vim.cmd [[ silent! colorscheme base16-atlas ]]
+vim.cmd [[ silent! colorscheme habamax ]]
 opt.updatetime = 50
 
 vim.cmd [[ set clipboard+=unnamedplus]]
@@ -37,10 +37,6 @@ vim.cmd [[ au VimEnter * exe 'tabdo windo clearjumps' | tabnext ]]
 
 --
 
---folding methods
-vim.cmd [[ set foldmethod=manual]]
-
---
 
 --undo
 opt.swapfile = false
