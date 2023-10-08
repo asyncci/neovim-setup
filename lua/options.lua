@@ -21,10 +21,18 @@ opt.swapfile = false
 
 opt.clipboard = 'unnamed'
 
-opt.syntax = "on" 
+opt.syntax = "on"
 opt.termguicolors = true
+
+--colorscheme
 vim.cmd [[ silent! let base16colorspace=256]]
-vim.cmd [[ silent! colorscheme habamax ]]
+vim.cmd [[ silent!
+    colorscheme default
+    highlight PmenuSel gui=bold guibg=DarkBlue guifg=White
+]]
+
+--
+
 opt.updatetime = 50
 
 vim.cmd [[ set clipboard+=unnamedplus]]
@@ -45,9 +53,9 @@ opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
 opt.undofile = true
 
 --mappings
-vim.keymap.set('n','<Space><Tab>', '<Cmd>b#<CR>')
-vim.keymap.set('n','<Home>', '^')
-vim.keymap.set('n','<End>', '$')
+vim.keymap.set('n', '<Space><Tab>', '<Cmd>b#<CR>')
+vim.keymap.set('n', '<Home>', '^')
+vim.keymap.set('n', '<End>', '$')
 
 
 --plugins START
