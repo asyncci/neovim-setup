@@ -29,6 +29,8 @@ vim.cmd [[ silent! let base16colorspace=256]]
 vim.cmd [[ silent!
     colorscheme default
     highlight PmenuSel gui=bold guibg=DarkBlue guifg=White
+    highlight TelescopeSelection gui=bold guibg=DarkBlue
+    highlight TelescopeMatching gui=bold guibg=Green 
 ]]
 
 --
