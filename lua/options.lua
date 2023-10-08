@@ -46,6 +46,8 @@ opt.undofile = true
 
 --mappings
 vim.keymap.set('n','<Space><Tab>', '<Cmd>b#<CR>')
+vim.keymap.set('n','<Home>', '^')
+vim.keymap.set('n','<End>', '$')
 
 
 --plugins START
