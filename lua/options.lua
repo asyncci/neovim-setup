@@ -36,6 +36,7 @@ vim.cmd [[ silent!
     colorscheme base16-chalk
 ]]
 
+vim.lsp.set_log_level("debug")
 --
 
 opt.updatetime = 50

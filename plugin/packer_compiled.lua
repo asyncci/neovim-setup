@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Zig.nvim"] = {
+    loaded = true,
+    path = "/home/asyncci/.local/share/nvim/site/pack/packer/start/Zig.nvim",
+    url = "https://github.com/jinzhongjia/Zig.nvim"
+  },
   ["autoclose.nvim"] = {
     config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14autoclose\frequire\0" },
     loaded = true,
@@ -109,6 +114,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/asyncci/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
+  },
+  ["inlay-hints.nvim"] = {
+    loaded = true,
+    path = "/home/asyncci/.local/share/nvim/site/pack/packer/start/inlay-hints.nvim",
+    url = "https://github.com/simrat39/inlay-hints.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,

@@ -5,7 +5,7 @@ local ensure_installed = {
     'lua-language-server',
     'clangd',
     'omnisharp',
-    'zls'
+    'python-lsp-server',
 }
 require('mason').setup({
     ui = {
@@ -36,10 +36,16 @@ vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 
+local inlayHints = require("inlay-hints");
+
+inlayHints.setup({
+    renderer = "inlay-hints/render/eol",
+});
+
 local on_attach = function(client, bufnr)
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
+    inlayHints.on_attach(client, bufnr)
     -- Mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
@@ -109,6 +115,10 @@ local rust_opts = {
     on_attach = on_attach
 }
 
+local zls_opts = {
+    capabilities = caps,
+    on_attach = on_attach,
+}
 --[[
 ---rust
 local rt = require("rust-tools")
@@ -150,10 +160,11 @@ local servers = {
     omnisharp = omnisharpOpts,
     clangd = clangdOpts,
     lua_ls = stdOpts,
-    zls = stdOpts,
     cmake = stdOpts,
     gopls = stdOpts,
+    zls = zls_opts,
     lemminx = stdOpts,
+    pylsp = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do

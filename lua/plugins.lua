@@ -2,14 +2,15 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     --syntax highlight
-    use {'nvim-treesitter/nvim-treesitter', tag = 'v0.9.0'}
+    use { 'nvim-treesitter/nvim-treesitter', tag = 'v0.9.0' }
 
     --file explorer
     --    use 'nvim-tree/nvim-tree.lua'
 
     --fuzzy
     use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
-    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run =
+    'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
     --buffers
     --    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
 
@@ -21,7 +22,10 @@ return require('packer').startup(function(use)
     --lsp / autoformat
     use { 'williamboman/mason.nvim', run = ':MasonUpdate' }
     use { 'neovim/nvim-lspconfig', requires = { "williamboman/mason-lspconfig.nvim", "Hoffs/omnisharp-extended-lsp.nvim" } }
+    use('simrat39/inlay-hints.nvim')
 
+    --zig
+    use {'jinzhongjia/Zig.nvim'}
     --rust
     use 'simrat39/rust-tools.nvim'
 
