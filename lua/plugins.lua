@@ -2,7 +2,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     --syntax highlight
-    use { 'nvim-treesitter/nvim-treesitter', tag = 'v0.9.0' }
+    use { 'nvim-treesitter/nvim-treesitter', tag = 'v0.9.0', run = ':TSUpdate'}
 
     --file explorer
     --    use 'nvim-tree/nvim-tree.lua'
@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
     use('simrat39/inlay-hints.nvim')
 
     --zig
-    use {'jinzhongjia/Zig.nvim'}
+    use { 'jinzhongjia/Zig.nvim' }
     --rust
     use 'simrat39/rust-tools.nvim'
 

@@ -5,7 +5,7 @@ local ensure_installed = {
     'lua-language-server',
     'clangd',
     'omnisharp',
-    'python-lsp-server',
+    'pyright',
 }
 require('mason').setup({
     ui = {
@@ -164,7 +164,7 @@ local servers = {
     gopls = stdOpts,
     zls = zls_opts,
     lemminx = stdOpts,
-    pylsp = stdOpts,
+    pyright = stdOpts ,
 }
 
 for lsp, opts in pairs(servers) do
