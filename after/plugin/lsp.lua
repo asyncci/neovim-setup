@@ -6,6 +6,7 @@ local ensure_installed = {
     'clangd',
     'omnisharp',
     'pyright',
+    'tss',
 }
 require('mason').setup({
     ui = {
@@ -165,6 +166,7 @@ local servers = {
     zls = zls_opts,
     lemminx = stdOpts,
     pyright = stdOpts ,
+    tsserver = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do
