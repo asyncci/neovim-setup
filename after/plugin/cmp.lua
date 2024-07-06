@@ -11,6 +11,14 @@ cmp.setup({
             winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
         },
     },
+    formatting = {
+        fields = { cmp.ItemField.Abbr, cmp.ItemField.Kind, cmp.ItemField.Menu },
+        format = function(entry, vim_item)
+            vim_item.abbr = string.sub(vim_item.abbr, 1, 14)
+            vim_item.menu = ''
+            return vim_item
+        end
+    },
     snippet = {
         -- REQUIRED - you must specify a snippet engine
         expand = function(args)

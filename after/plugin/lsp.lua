@@ -7,6 +7,7 @@ local ensure_installed = {
     'omnisharp',
     'pyright',
     'tss',
+    'jdtls',
 }
 require('mason').setup({
     ui = {
@@ -167,6 +168,7 @@ local servers = {
     lemminx = stdOpts,
     pyright = stdOpts ,
     tsserver = stdOpts,
+    jdtls = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do

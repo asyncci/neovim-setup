@@ -1,7 +1,7 @@
 vim.cmd [[ function! g:SyntaxGroup() abort
-    let l:s = synID(line('.'), col('.'), 1) 
+    let l: = synID(line('.'), col('.'), 1) 
     echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
-endfunction       
+endfunction 
 nnoremap <F12> :call SyntaxGroup()<CR> 
 ]]
 local opt = vim.opt
@@ -17,6 +17,7 @@ opt.autoindent = true
 opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 8
+opt.ruler = true
 
 opt.tabstop = 4
 opt.expandtab = true
@@ -28,8 +29,8 @@ opt.swapfile = false
 opt.clipboard = 'unnamed'
 
 opt.syntax = "on"
-opt.termguicolors = true
 
+opt.termguicolors = true
 --colorscheme
 vim.cmd [[ silent! let base16colorspace=256]]
 vim.cmd [[ silent!
