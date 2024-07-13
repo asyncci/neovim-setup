@@ -33,8 +33,9 @@ opt.syntax = "on"
 opt.termguicolors = true
 --colorscheme
 vim.cmd [[ silent! let base16colorspace=256]]
+--colorscheme base16-chalk
 vim.cmd [[ silent!
-    colorscheme base16-chalk
+    colorscheme base16-atlas
 ]]
 
 vim.lsp.set_log_level("debug")
