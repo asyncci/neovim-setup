@@ -8,6 +8,7 @@ local ensure_installed = {
     'pyright',
     'tss',
     'jdtls',
+    'prisma-language-server',
 }
 require('mason').setup({
     ui = {
@@ -169,6 +170,7 @@ local servers = {
     pyright = stdOpts ,
     tsserver = stdOpts,
     jdtls = stdOpts,
+    prismals = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do
