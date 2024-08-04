@@ -9,6 +9,7 @@ local ensure_installed = {
     'tss',
     'jdtls',
     'prisma-language-server',
+    'denols'
 }
 require('mason').setup({
     ui = {
@@ -168,9 +169,10 @@ local servers = {
     zls = zls_opts,
     lemminx = stdOpts,
     pyright = stdOpts ,
-    tsserver = stdOpts,
+    --tsserver = stdOpts,
     jdtls = stdOpts,
     prismals = stdOpts,
+    denols = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do
