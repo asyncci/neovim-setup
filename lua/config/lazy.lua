@@ -29,7 +29,7 @@ require("lazy").setup({
             vim.cmd [[ silent! let base16colorspace=256]]
             --colorscheme base16-chalk
             vim.cmd [[ silent!
-    colorscheme base16-atlas
+    colorscheme base16-atelier-lakeside
 ]]
         end,
     },

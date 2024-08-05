@@ -6,10 +6,9 @@ local ensure_installed = {
     'clangd',
     'omnisharp',
     'pyright',
-    'tss',
+    'tsserver',
     'jdtls',
     'prisma-language-server',
-    'denols'
 }
 require('mason').setup({
     ui = {
@@ -93,6 +92,15 @@ local stdOpts = {
     on_attach = on_attach
 }
 
+local harperOpts = {
+    capabilities = caps,
+    on_attach = on_attach,
+    settings = {
+        ["harper-ls"] = {
+            userDictPath = "~/dict.txt"
+        }
+    }
+}
 
 local clangdOpts = {
     capabilities = caps,
@@ -168,11 +176,11 @@ local servers = {
     gopls = stdOpts,
     zls = zls_opts,
     lemminx = stdOpts,
-    pyright = stdOpts ,
+    pyright = stdOpts,
     --tsserver = stdOpts,
+    harper_ls = harperOpts,
     jdtls = stdOpts,
     prismals = stdOpts,
-    denols = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do
