@@ -1,13 +1,6 @@
 local ensure_installed = {
-    'lemminx',
-    'gopls',
-    'rust-analyzer',
-    'lua-language-server',
-    'clangd',
-    'omnisharp',
-    'pyright',
-    'tss',
-    'jdtls',
+    'vstls',
+    'prisma-language-server',
 }
 require('mason').setup({
     ui = {
@@ -117,10 +110,6 @@ local rust_opts = {
     on_attach = on_attach
 }
 
-local zls_opts = {
-    capabilities = caps,
-    on_attach = on_attach,
-}
 --[[
 ---rust
 local rt = require("rust-tools")
@@ -158,17 +147,10 @@ rt.setup({
 --]]
 
 local servers = {
-    rust_analyzer = rust_opts,
-    omnisharp = omnisharpOpts,
-    clangd = clangdOpts,
     lua_ls = stdOpts,
-    cmake = stdOpts,
-    gopls = stdOpts,
-    zls = zls_opts,
-    lemminx = stdOpts,
-    pyright = stdOpts ,
-    tsserver = stdOpts,
-    jdtls = stdOpts,
+    zls = stdOpts,
+    vtsls = stdOpts,
+    prismals = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do

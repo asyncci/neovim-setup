@@ -1,5 +1,5 @@
 require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { 'rust', 'lua', 'go', 'c', 'python','cpp' },
+    ensure_installed = { 'zig', 'typescript' },
     sync_install = false,
 
     auto_install = true,

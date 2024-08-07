@@ -1,8 +1,11 @@
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
+    --project tree
+    use { 'nvim-tree/nvim-tree.lua'}
+
     --syntax highlight
-    use { 'nvim-treesitter/nvim-treesitter', tag = 'v0.9.0', run = ':TSUpdate'}
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
     --file explorer
     --    use 'nvim-tree/nvim-tree.lua'

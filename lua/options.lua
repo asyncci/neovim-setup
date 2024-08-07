@@ -34,7 +34,7 @@ opt.termguicolors = true
 --colorscheme
 vim.cmd [[ silent! let base16colorspace=256]]
 vim.cmd [[ silent!
-    colorscheme base16-chalk
+    colorscheme base16-atelier-lakeside
 ]]
 
 vim.lsp.set_log_level("debug")
@@ -78,6 +78,7 @@ vim.keymap.set('n', '<C-CR>', ':Telescope<CR>')
 --vim.keymap.set('n', 'c;', '<Cmd>TermExec cmd="<C-c>"<CR>')
 --plugins END
 
+vim.keymap.set('n', ',l', ':NvimTreeOpen<CR>')
 
 vim.keymap.set('n', '<C-h>', ':nohlsearch<CR>')
 vim.keymap.set('n', '<C-l>', ':call setqflist([])<CR>')
