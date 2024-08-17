@@ -151,6 +151,7 @@ local servers = {
     zls = stdOpts,
     vtsls = stdOpts,
     prismals = stdOpts,
+    jsonls = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do
