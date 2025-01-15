@@ -147,11 +147,13 @@ rt.setup({
 --]]
 
 local servers = {
+    pyright = stdOpts,
     lua_ls = stdOpts,
     zls = stdOpts,
     vtsls = stdOpts,
     prismals = stdOpts,
     jsonls = stdOpts,
+    clangd = stdOpts,
 }
 
 for lsp, opts in pairs(servers) do

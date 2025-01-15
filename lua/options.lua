@@ -15,7 +15,7 @@ opt.incsearch = true
 opt.autoindent = true
 
 opt.number = true
-opt.relativenumber = true
+opt.relativenumber = false
 opt.scrolloff = 8
 opt.ruler = true
 
@@ -83,12 +83,11 @@ vim.keymap.set('n', ',l', ':NvimTreeOpen<CR>')
 vim.keymap.set('n', '<C-h>', ':nohlsearch<CR>')
 vim.keymap.set('n', '<C-l>', ':call setqflist([])<CR>')
 
-vim.keymap.set('v', "K", ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', "K", ":m '>+2<CR>gv=gv")
 vim.keymap.set('v', "J", ":m '<-2<CR>gv=gv")
 
-
 --window resize
-vim.keymap.set("n", "<C-0>", ':vertical resize +5<CR>')   -- make the window biger vertically
-vim.keymap.set("n", "<C-9>", ':vertical resize -5<CR>')   -- make the window smaller vertically
-vim.keymap.set("n", "<A-0>", ':horizontal resize +2<CR>') -- make the window bigger horizontally by pressing shift and =
-vim.keymap.set("n", "<A-9>", ':horizontal resize -2<CR>') -- make the window smaller horizontally by pressing shift and -
+vim.keymap.set("n", "<C-S-0>", ':vertical resize +5<CR>')   -- make the window biger vertically
+vim.keymap.set("n", "<C-S-9>", ':vertical resize -5<CR>')   -- make the window smaller vertically
+vim.keymap.set("n", "<A-S-0>", ':horizontal resize +2<CR>') -- make the window bigger horizontally by pressing shift and =
+vim.keymap.set("n", "<A-S-9>", ':horizontal resize -2<CR>') -- make the window smaller horizontally by pressing shift and -
