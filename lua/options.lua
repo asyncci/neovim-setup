@@ -52,6 +52,10 @@ vim.cmd [[ au VimEnter * exe 'tabdo windo clearjumps' | tabnext ]]
 
 --
 
+--no wrap endline
+vim.wo.wrap = false
+--
+
 
 --undo
 opt.swapfile = false
