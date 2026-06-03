@@ -6,7 +6,7 @@ local ensure_installed = {
     'clangd',
     'omnisharp',
     'pyright',
-    'tsserver',
+    'ts_ls',
     'jdtls',
     'prisma-language-server',
 }
@@ -177,7 +177,7 @@ local servers = {
     zls = zls_opts,
     lemminx = stdOpts,
     pyright = stdOpts,
-    --tsserver = stdOpts,
+    ts_ls = stdOpts,
     harper_ls = harperOpts,
     jdtls = stdOpts,
     prismals = stdOpts,
