@@ -38,7 +38,7 @@ opt.termguicolors = true
 --    colorscheme base16-atlas
 --]]
 
-vim.lsp.set_log_level("debug")
+vim.lsp.log.set_level("debug")
 --
 
 opt.updatetime = 50
